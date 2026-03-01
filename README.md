@@ -1,5 +1,5 @@
 # Scalable-and-Cloud-Programming-Project-Seismic-Analysis
-Progetto di Scalable and Cloud Programming per il corso di Informatica Magistrane dell'Università di Bologna, a.2025/2026.
+Progetto di Scalable and Cloud Programming per il corso di Informatica Magistrale dell'Università di Bologna, a.2025/2026.
 
 Il file di logica principale è `src/main/scala/EarthquakeAnalysis.scala`
 
@@ -19,9 +19,9 @@ gcloud dataproc jobs submit spark \
   --jar=gs://<bucket>/EarthquakeAnalysis-assembly-1.0.jar \
   -- gs://<bucket>/<dataset>.csv gs://<bucket>/Outputs <num_partizioni>
 ```
-Argomenti Posizionali:
+Argomenti posizionali:
 1. path_input: Percorso del file CSV del dataset.
 2. path_output: Percorso della directory di output (verrà creata automaticamente).
 3. num_partizioni: (Opzionale) Numero di partizioni per il repartitioning (consigliato: 512-1024, default 512).
 
-Per comodità, e già presente l'output atteso dalla versione completa del dataset in `SavedOutput`.
+Per comodità, è già presente l'output atteso dalla versione completa del dataset in `SavedOutput`.
