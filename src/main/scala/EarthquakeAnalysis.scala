@@ -44,7 +44,7 @@ object EarthquakeAnalysis {
 
     // ====== INIZIO LOGICA PRINCIPALE ======
     // Raggruppamento per data
-    val numPartitions = if (args.length > 2) args(2).toInt else 32
+    val numPartitions = if (args.length > 2) args(2).toInt else 512
     val eventsByDate = cleanedEvents
       .map { case (loc, date) => (date, loc) }
       .repartition(numPartitions) // Bilancia il carico tra i nodi
