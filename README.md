@@ -16,7 +16,7 @@ Crea un cluster Dataproc (o usane uno già presente), e infine esegui il seguent
 gcloud dataproc jobs submit spark \
   --cluster=<nome> \
   --region=<regione> \
-  --jar=gs://<bucket>/EarthquakeAnalysis-cache-1.0.jar \
+  --jar=gs://<bucket>/EarthquakeAnalysis-assembly-1.0.jar \
   -- gs://<bucket>/<dataset>.csv gs://<bucket>/Outputs <num_partizioni>
 ```
 Argomenti Posizionali:
