@@ -11,7 +11,7 @@ sbt assembly
 Verrà generato il file: `target/scala-2.12/EarthquakeAnalysis-assembly-1.0.jar`
 
 Carica questo file .jar in un bucket Google Cloud Storage, assieme al dataset da analizzare.
-Crea un cluster Dataproc (o usarne uno già presente), e infine eseguire il seguente comando:
+Crea un cluster Dataproc (o usane uno già presente), e infine esegui il seguente comando:
 ```bash
 gcloud dataproc jobs submit spark \
   --cluster=<nome> \
@@ -23,3 +23,5 @@ Argomenti Posizionali:
 1. path_input: Percorso del file CSV del dataset.
 2. path_output: Percorso della directory di output (verrà creata automaticamente).
 3. num_partizioni: (Opzionale) Numero di partizioni per il repartitioning (consigliato: 512-1024, default 512).
+
+Per comodità, e già presente l'output atteso dalla versione completa del dataset in `SavedOutput`.
